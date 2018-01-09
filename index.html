@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>My maps</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	<h1>My Google Maps</h1>
+
+	<div id="destinationForm">
+		<form action="" method="get" name="direction" id="direction">
+			<i class="fa fa-location-arrow" aria-hidden="true"></i><label> Point de départ :</label>
+			<input type="text" name="origin" id="origin">
+			<i class="fa fa-map-marker" aria-hidden="true"></i><label> Point d'arrivée :</label>
+			<input type="text" name="destination" id="destination">
+			<input type="text" name="coordonnees" id="origin">
+			<label>Mode de transport :</label>
+				<select id="mode">
+					<option value="DRIVING">Voiture</option>
+					<option value="RAIL">Train</option>
+					<option value="BICYCLING">Vélo</option>
+					<option value="WALKING">Marche</option>
+				</select>
+			<input type="button" value="Calculer l'itinéraire" onclick="javascript:calculate()">
+			<input type="button" value="Localisation" onclick="javascript:localisation()">
+			<input type="button" value="Inverse" onclick="javascript:inverse()">
+		</form>
+	</div>
+
+	<div id="map" align="center"></div>
+	<div id="panel"></div>
+	<script type="text/javascript" src="js/script.js"></script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWPNA_1VCmdMmxpuj8R--eHFxE0ucj6lM&callback=initMap"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=fr"></script>
+</body>
+</html>
+
